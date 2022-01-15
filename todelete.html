@@ -1,0 +1,598 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./src/assets/css/try.css" media="screen">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <link href="/Vue.js-Practice-examples/css/chunk-313668be.7aa1eb5a.css" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/css/chunk-5b32081f.eeaeb145.css" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/css/chunk-624f704c.36dba35d.css" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/css/chunk-6a09b50c.a0fd7b07.css" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/css/demo.5517a2e2.css" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/chunk-2d21a36a.4ad90fdd.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/chunk-2d2255f7.6c7c5a7f.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/chunk-2d22d746.134d6adb.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/chunk-313668be.f2694215.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/chunk-5b32081f.d7eb9039.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/chunk-624f704c.734894e3.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/chunk-6a09b50c.56b7b834.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/js/demo.4a07a0cd.js" rel="prefetch">
+    <link href="/Vue.js-Practice-examples/css/app.27ef1a6f.css" rel="preload" as="style">
+    <link href="/Vue.js-Practice-examples/css/chunk-vendors.efb58d3a.css" rel="preload" as="style">
+    <link href="/Vue.js-Practice-examples/js/app.259ac39e.js" rel="preload" as="script">
+    <link href="/Vue.js-Practice-examples/js/chunk-vendors.1f2e67b5.js" rel="preload" as="script">
+    <link href="/Vue.js-Practice-examples/css/chunk-vendors.efb58d3a.css" rel="stylesheet">
+    <link href="/Vue.js-Practice-examples/css/app.27ef1a6f.css" rel="stylesheet">
+</head>
+<div id="app"></div>
+</html>
+<style></style>
+<script src="/Vue.js-Practice-examples/js/chunk-vendors.1f2e67b5.js"></script>
+<script src="/Vue.js-Practice-examples/js/app.259ac39e.js"></script>
+
+<script>
+    (function (t) {
+        function e(e) {
+            for (var a, s, i = e[0], o = e[1], u = e[2], l = 0, d = []; l < i.length; l++) s = i[l], Object.prototype.hasOwnProperty.call(r, s) && r[s] && d.push(r[s][0]), r[s] = 0;
+            for (a in o) Object.prototype.hasOwnProperty.call(o, a) && (t[a] = o[a]);
+            f && f(e);
+            while (d.length) d.shift()();
+            return c.push.apply(c, u || []), n()
+        }
+
+        function n() {
+            for (var t, e = 0; e < c.length; e++) {
+                for (var n = c[e], a = !0, s = 1; s < n.length; s++) {
+                    var i = n[s];
+                    0 !== r[i] && (a = !1)
+                }
+                a && (c.splice(e--, 1), t = o(o.s = n[0]))
+            }
+            return t
+        }
+
+        var a = {}, s = {app: 0}, r = {app: 0}, c = [];
+
+        function i(t) {
+            return o.p + "js/" + ({demo: "demo"}[t] || t) + "." + {
+                "chunk-2d21a36a": "4ad90fdd",
+                "chunk-2d2255f7": "6c7c5a7f",
+                "chunk-2d22d746": "134d6adb",
+                "chunk-313668be": "f2694215",
+                "chunk-5b32081f": "d7eb9039",
+                "chunk-624f704c": "734894e3",
+                "chunk-6a09b50c": "56b7b834",
+                demo: "4a07a0cd"
+            }[t] + ".js"
+        }
+
+        function o(e) {
+            if (a[e]) return a[e].exports;
+            var n = a[e] = {i: e, l: !1, exports: {}};
+            return t[e].call(n.exports, n, n.exports, o), n.l = !0, n.exports
+        }
+
+        o.e = function (t) {
+            var e = [],
+                n = {"chunk-313668be": 1, "chunk-5b32081f": 1, "chunk-624f704c": 1, "chunk-6a09b50c": 1, demo: 1};
+            s[t] ? e.push(s[t]) : 0 !== s[t] && n[t] && e.push(s[t] = new Promise((function (e, n) {
+                for (var a = "css/" + ({demo: "demo"}[t] || t) + "." + {
+                    "chunk-2d21a36a": "31d6cfe0",
+                    "chunk-2d2255f7": "31d6cfe0",
+                    "chunk-2d22d746": "31d6cfe0",
+                    "chunk-313668be": "7aa1eb5a",
+                    "chunk-5b32081f": "eeaeb145",
+                    "chunk-624f704c": "36dba35d",
+                    "chunk-6a09b50c": "a0fd7b07",
+                    demo: "5517a2e2"
+                }[t] + ".css", r = o.p + a, c = document.getElementsByTagName("link"), i = 0; i < c.length; i++) {
+                    var u = c[i], l = u.getAttribute("data-href") || u.getAttribute("href");
+                    if ("stylesheet" === u.rel && (l === a || l === r)) return e()
+                }
+                var d = document.getElementsByTagName("style");
+                for (i = 0; i < d.length; i++) {
+                    u = d[i], l = u.getAttribute("data-href");
+                    if (l === a || l === r) return e()
+                }
+                var f = document.createElement("link");
+                f.rel = "stylesheet", f.type = "text/css", f.onload = e, f.onerror = function (e) {
+                    var a = e && e.target && e.target.src || r,
+                        c = new Error("Loading CSS chunk " + t + " failed.\n(" + a + ")");
+                    c.code = "CSS_CHUNK_LOAD_FAILED", c.request = a, delete s[t], f.parentNode.removeChild(f), n(c)
+                }, f.href = r;
+                var p = document.getElementsByTagName("head")[0];
+                p.appendChild(f)
+            })).then((function () {
+                s[t] = 0
+            })));
+            var a = r[t];
+            if (0 !== a) if (a) e.push(a[2]); else {
+                var c = new Promise((function (e, n) {
+                    a = r[t] = [e, n]
+                }));
+                e.push(a[2] = c);
+                var u, l = document.createElement("script");
+                l.charset = "utf-8", l.timeout = 120, o.nc && l.setAttribute("nonce", o.nc), l.src = i(t);
+                var d = new Error;
+                u = function (e) {
+                    l.onerror = l.onload = null, clearTimeout(f);
+                    var n = r[t];
+                    if (0 !== n) {
+                        if (n) {
+                            var a = e && ("load" === e.type ? "missing" : e.type), s = e && e.target && e.target.src;
+                            d.message = "Loading chunk " + t + " failed.\n(" + a + ": " + s + ")", d.name = "ChunkLoadError", d.type = a, d.request = s, n[1](d)
+                        }
+                        r[t] = void 0
+                    }
+                };
+                var f = setTimeout((function () {
+                    u({type: "timeout", target: l})
+                }), 12e4);
+                l.onerror = l.onload = u, document.head.appendChild(l)
+            }
+            return Promise.all(e)
+        }, o.m = t, o.c = a, o.d = function (t, e, n) {
+            o.o(t, e) || Object.defineProperty(t, e, {enumerable: !0, get: n})
+        }, o.r = function (t) {
+            "undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, {value: "Module"}), Object.defineProperty(t, "__esModule", {value: !0})
+        }, o.t = function (t, e) {
+            if (1 & e && (t = o(t)), 8 & e) return t;
+            if (4 & e && "object" === typeof t && t && t.__esModule) return t;
+            var n = Object.create(null);
+            if (o.r(n), Object.defineProperty(n, "default", {
+                enumerable: !0,
+                value: t
+            }), 2 & e && "string" != typeof t) for (var a in t) o.d(n, a, function (e) {
+                return t[e]
+            }.bind(null, a));
+            return n
+        }, o.n = function (t) {
+            var e = t && t.__esModule ? function () {
+                return t["default"]
+            } : function () {
+                return t
+            };
+            return o.d(e, "a", e), e
+        }, o.o = function (t, e) {
+            return Object.prototype.hasOwnProperty.call(t, e)
+        }, o.p = "/Vue.js-Practice-examples/", o.oe = function (t) {
+            throw console.error(t), t
+        };
+        var u = window["webpackJsonp"] = window["webpackJsonp"] || [], l = u.push.bind(u);
+        u.push = e, u = u.slice();
+        for (var d = 0; d < u.length; d++) e(u[d]);
+        var f = l;
+        c.push([0, "chunk-vendors"]), n()
+    })({
+        0: function (t, e, n) {
+            t.exports = n("56d7")
+        }, "56d7": function (t, e, n) {
+            "use strict";
+            n.r(e);
+            n("e260"), n("e6cf"), n("cca6"), n("a79d");
+            var a = n("2b0e"), s = function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("div", {attrs: {id: "app"}}, [n("Navbar"), n("router-view")], 1)
+                }, r = [], c = (n("ab8b"), n("1e4b"), function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("div", {attrs: {id: "Navbar"}}, [t._m(0), n("header", {
+                        staticClass: "u-align-center-sm u-align-center-xs u-clearfix u-gradient u-header u-sticky u-sticky-3a3f u-header",
+                        attrs: {id: "sec-28ab"}
+                    }, [n("div", {staticClass: "u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1"}, [t._m(1), n("div", {staticClass: "u-social-icons u-spacing-10 u-social-icons-1"}, [n("a", {
+                        staticClass: "u-social-url",
+                        attrs: {title: "facebook", target: "_blank", href: ""}
+                    }, [n("span", {staticClass: "u-icon u-social-facebook u-social-icon u-icon-1"}, [n("svg", {
+                        staticClass: "u-svg-link",
+                        attrs: {preserveAspectRatio: "xMidYMin slice", viewBox: "0 0 112 112"}
+                    }, [n("use", {
+                        attrs: {
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            "xlink:href": "#svg-25bb"
+                        }
+                    })]), n("svg", {
+                        staticClass: "u-svg-content",
+                        attrs: {viewBox: "0 0 112 112", x: "0", y: "0", id: "svg-25bb"}
+                    }, [n("circle", {
+                        attrs: {
+                            fill: "currentColor",
+                            cx: "56.1",
+                            cy: "56.1",
+                            r: "55"
+                        }
+                    }), n("path", {
+                        attrs: {
+                            fill: "#FFFFFF",
+                            d: "M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2\n            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"
+                        }
+                    })])])]), n("a", {
+                        staticClass: "u-social-url",
+                        attrs: {title: "twitter", target: "_blank", href: ""}
+                    }, [n("span", {staticClass: "u-icon u-social-icon u-social-twitter u-icon-2"}, [n("svg", {
+                        staticClass: "u-svg-link",
+                        attrs: {preserveAspectRatio: "xMidYMin slice", viewBox: "0 0 112 112"}
+                    }, [n("use", {
+                        attrs: {
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            "xlink:href": "#svg-d756"
+                        }
+                    })]), n("svg", {
+                        staticClass: "u-svg-content",
+                        attrs: {viewBox: "0 0 112 112", x: "0", y: "0", id: "svg-d756"}
+                    }, [n("circle", {
+                        staticClass: "st0",
+                        attrs: {fill: "currentColor", cx: "56.1", cy: "56.1", r: "55"}
+                    }), n("path", {
+                        attrs: {
+                            fill: "#FFFFFF",
+                            d: "M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2\n            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1\n            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14\n            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4\n            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"
+                        }
+                    })])])]), n("a", {
+                        staticClass: "u-social-url",
+                        attrs: {title: "instagram", target: "_blank", href: ""}
+                    }, [n("span", {staticClass: "u-icon u-social-icon u-social-instagram u-icon-3"}, [n("svg", {
+                        staticClass: "u-svg-link",
+                        attrs: {preserveAspectRatio: "xMidYMin slice", viewBox: "0 0 112 112"}
+                    }, [n("use", {
+                        attrs: {
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            "xlink:href": "#svg-f183"
+                        }
+                    })]), n("svg", {
+                        staticClass: "u-svg-content",
+                        attrs: {viewBox: "0 0 112 112", x: "0", y: "0", id: "svg-f183"}
+                    }, [n("circle", {
+                        attrs: {
+                            fill: "currentColor",
+                            cx: "56.1",
+                            cy: "56.1",
+                            r: "55"
+                        }
+                    }), n("path", {
+                        attrs: {
+                            fill: "#FFFFFF",
+                            d: "M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2\n            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"
+                        }
+                    }), n("path", {
+                        attrs: {
+                            fill: "#FFFFFF",
+                            d: "M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"
+                        }
+                    }), n("path", {
+                        attrs: {
+                            fill: "#FFFFFF",
+                            d: "M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8\n            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5\n            c5.5,0,9.9,4.5,9.9,9.9V73.3z"
+                        }
+                    })])])])]), n("nav", {staticClass: "u-align-center u-menu u-menu-dropdown u-offcanvas u-menu-1"}, [n("div", {
+                        staticClass: "menu-collapse",
+                        staticStyle: {"font-size": "1rem"}
+                    }, [n("a", {
+                        staticClass: "u-button-style u-nav-link",
+                        attrs: {href: "#"}
+                    }, [n("svg", {
+                        staticClass: "u-svg-link",
+                        attrs: {preserveAspectRatio: "xMidYMin slice", viewBox: "0 0 302 302"}
+                    }, [n("use", {
+                        attrs: {
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            "xlink:href": "#svg-8a8f"
+                        }
+                    })]), n("svg", {
+                        staticClass: "u-svg-content",
+                        staticStyle: {"enable-background": "new 0 0 302 302"},
+                        attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            version: "1.1",
+                            id: "svg-8a8f",
+                            x: "0px",
+                            y: "0px",
+                            viewBox: "0 0 302 302",
+                            "xml:space": "preserve"
+                        }
+                    }, [n("g", [n("rect", {attrs: {y: "36", width: "302", height: "30"}}), n("rect", {
+                        attrs: {
+                            y: "236",
+                            width: "302",
+                            height: "30"
+                        }
+                    }), n("rect", {
+                        attrs: {
+                            y: "136",
+                            width: "302",
+                            height: "30"
+                        }
+                    })]), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g"), n("g")])])]), n("div", {staticClass: "u-custom-menu u-nav-container"}, [n("ul", {staticClass: "u-nav u-unstyled u-nav-1"}, [n("li", {staticClass: "u-nav-item"}, [n("a", {staticClass: "u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"}, [n("router-link", {
+                        staticStyle: {color: "#0f0f0f"},
+                        attrs: {to: "/"}
+                    }, [t._v("Home")])], 1)]), n("li", {staticClass: "u-nav-item"}, [n("a", {staticClass: "u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"}, [n("router-link", {
+                        staticStyle: {color: "#0f0f0f"},
+                        attrs: {to: "/Products"}
+                    }, [t._v("Products")])], 1)]), t._m(2), t._m(3)])]), n("div", {staticClass: "u-custom-menu u-nav-container-collapse"}, [n("div", {staticClass: "u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav"}, [n("div", {staticClass: "u-inner-container-layout u-sidenav-overflow"}, [n("div", {staticClass: "u-menu-close"}, [n("ul", {staticClass: "u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"}, [n("li", {staticClass: "u-nav-item"}, [n("a", {staticClass: "u-button-style u-nav-link"}, [n("router-link", {
+                        staticStyle: {color: "white"},
+                        attrs: {to: "/"}
+                    }, [t._v("Home")])], 1)]), n("li", {staticClass: "u-nav-item"}, [n("a", {staticClass: "u-button-style u-nav-link"}, [n("router-link", {
+                        staticStyle: {color: "white"},
+                        attrs: {to: "/Products"}
+                    }, [t._v("Products")])], 1)]), t._m(4), t._m(5)])])])]), n("div", {staticClass: "u-black u-menu-overlay u-opacity u-opacity-80"})])]), n("a", {
+                        staticClass: "u-shopping-cart u-shopping-cart-1",
+                        style: t.onCartCountChange(),
+                        attrs: {href: "#"},
+                        on: {
+                            click: function (e) {
+                                t.$router.push({name: "Cart"}).catch((function (t) {
+                                }))
+                            }
+                        }
+                    }, [n("span", {staticClass: "u-icon u-shopping-cart-icon"}, [n("svg", {
+                        staticClass: "u-svg-link",
+                        attrs: {preserveAspectRatio: "xMidYMin slice", viewBox: "0 0 16 16"}
+                    }, [n("use", {
+                        attrs: {
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            "xlink:href": "#svg-f766"
+                        }
+                    })]), n("svg", {
+                        staticClass: "u-svg-content",
+                        attrs: {viewBox: "0 0 16 16", x: "0px", y: "0px", id: "svg-f766"}
+                    }, [n("path", {attrs: {d: "M14.5,3l-2.1,5H6.1L5.9,7.6L4,3H14.5 M0,0v1h2.1L5,8l-2,4h11v-1H4.6l1-2H13l3-7H3.6L2.8,0H0z M12.5,13\n\tc-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S13.3,13,12.5,13L12.5,13z M4.5,13C3.7,13,3,13.7,3,14.5S3.7,16,4.5,16\n\tS6,15.3,6,14.5S5.3,13,4.5,13L4.5,13z"}})]), n("span", {
+                        staticClass: "u-icon-circle u-palette-1-base u-shopping-cart-count",
+                        staticStyle: {"font-size": "0.75rem"}
+                    }, [t._v(" " + t._s(t.calcSum) + " ")])])])])])])
+                }), i = [function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("head", [n("meta", {
+                        attrs: {
+                            name: "viewport",
+                            content: "width=device-width, initial-scale=1"
+                        }
+                    }), n("meta", {attrs: {charset: "utf-8"}}), n("title", [t._v("Copy of Home")]), n("link", {
+                        attrs: {
+                            id: "u-theme-google-font",
+                            rel: "stylesheet",
+                            href: "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+                        }
+                    }), n("script", {
+                        staticClass: "u-script",
+                        attrs: {type: "application/javascript", src: "./src/assets/js/nicepage.js", defer: ""}
+                    }), n("link", {
+                        attrs: {
+                            rel: "stylesheet",
+                            type: "text/css",
+                            href: "http://www.shieldui.com/shared/components/latest/css/light-glow/all.min.css"
+                        }
+                    })])
+                }, function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("a", {
+                        staticClass: "u-image u-logo u-image-1",
+                        attrs: {href: "https://nicepage.com", "data-image-width": "80", "data-image-height": "40"}
+                    }, [n("img", {staticClass: "u-logo-image u-logo-image-1", attrs: {src: "src/assets/images/logo.png"}})])
+                }, function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("li", {staticClass: "u-nav-item"}, [n("a", {
+                        staticClass: "u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base",
+                        staticStyle: {padding: "10px 20px"},
+                        attrs: {href: "Contact.html"}
+                    }, [t._v("Contact")])])
+                }, function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("li", {staticClass: "u-nav-item"}, [n("a", {
+                        staticClass: "u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base",
+                        staticStyle: {padding: "10px 20px"},
+                        attrs: {href: "Page-1.html"}
+                    }, [t._v("Page 1")])])
+                }, function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("li", {staticClass: "u-nav-item"}, [n("a", {
+                        staticClass: "u-button-style u-nav-link",
+                        attrs: {href: "Contact.html"}
+                    }, [t._v("Contact")])])
+                }, function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("li", {staticClass: "u-nav-item"}, [n("a", {
+                        staticClass: "u-button-style u-nav-link",
+                        attrs: {href: "Page-1.html"}
+                    }, [t._v("Page 1")])])
+                }], o = (n("d3b7"), n("159b"), {
+                    name: "Navbar", methods: {
+                        onCartCountChange: function () {
+                            return this.calcSum > 0 ? "pointerEvent:auto;cursor:pointer" : "pointerEvent:none;cursor:not-allowed;pointer-events: none;"
+                        }
+                    }, computed: {
+                        calcSum: function () {
+                            var t = 0;
+                            return null === this.$store.state.cart[0] || this.$store.state.cart.forEach((function (e, n) {
+                                t += e.quantity
+                            })), t
+                        }
+                    }
+                }), u = o, l = (n("fe5b"), n("2877")), d = Object(l["a"])(u, c, i, !1, null, "6a9998e1", null),
+                f = d.exports, p = {
+                    data: function () {
+                        return {loading: !1}
+                    }, components: {Navbar: f}
+                }, h = p, v = Object(l["a"])(h, s, r, !1, null, null, null), m = v.exports, g = function () {
+                    var t = this, e = t.$createElement;
+                    t._self._c;
+                    return t._m(0)
+                }, b = [function () {
+                    var t = this, e = t.$createElement, n = t._self._c || e;
+                    return n("div", [n("p", [t._v("testoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo")])])
+                }], C = {name: "test"}, y = C, w = Object(l["a"])(y, g, b, !1, null, "b2c38d3e", null),
+                k = (w.exports, n("1da1")),
+                x = (n("96cf"), n("a434"), n("7db0"), n("c740"), n("d81d"), n("b64b"), n("2f62")), _ = n("bc3a"),
+                S = n.n(_), F = n("0e44"), P = (n("852e"), n("b330")), E = n("96d9");
+            a["default"].use(x["a"]);
+            var M = new x["a"].Store({
+                state: {count: 0, products: [], cart: [], onSale: [], newComing: [], productSelected: ""},
+                plugins: [Object(F["a"])({paths: ["cart"]})],
+                mutations: {
+                    INCREMENT: function (t) {
+                        t.count++
+                    }, deleteProductFromCart: function (t, e) {
+                        var n = e.index;
+                        t.cart.splice(n, 1)
+                    }, setProducts: function (t, e) {
+                        t.products = e
+                    }, setOnSale: function (t, e) {
+                        t.onSale = e
+                    }, setNewComing: function (t, e) {
+                        t.newComing = e
+                    }, resetCart: function (t, e) {
+                        t.cart = []
+                    }, addToCart: function (t, e) {
+                        this.state.cart.push({id: e.id, model: e.model, image: e.image, price: e.price, quantity: 1})
+                    }, RemoveFromCart: function (t, e) {
+                        t.products.find((function (t) {
+                            return t.id === parseInt(e.id)
+                        }));
+                        var n = t.cart.findIndex((function (t) {
+                            return t.id === e.id
+                        }));
+                        if (-1 === n) ; else {
+                            if (t.cart[n].quantity < 1) return;
+                            this.state.cart[n].quantity--
+                        }
+                    }, incrementItemQuantity: function (t, e) {
+                        this.state.cart[e].quantity = parseInt(this.state.cart[e].quantity) + 1
+                    }
+                },
+                actions: {
+                    addProductToCart: function (t, e) {
+                        var n = e.itemRequested, a = t.state.cart.findIndex((function (t) {
+                            return parseInt(t.id) === parseInt(n.id)
+                        }));
+                        if (-1 !== a) {
+                            if (t.state.cart[a].quantity > t.getters["getQuantityAvailableInDbById"](parseInt(n.id)) - 1) return;
+                            t.commit("incrementItemQuantity", a)
+                        } else t.commit("addToCart", n)
+                    }, fetchProducts: function (t) {
+                        return Object(k["a"])(regeneratorRuntime.mark((function e() {
+                            var n, a, s;
+                            return regeneratorRuntime.wrap((function (e) {
+                                while (1) switch (e.prev = e.next) {
+                                    case 0:
+                                        return n = t.commit, a = t.state, e.next = 3, S.a.get("src/assets/phones.json").then((function (t) {
+                                            n("setProducts", t.data)
+                                        }));
+                                    case 3:
+                                        s = [], a.products.map((function (t) {
+                                            for (var e = 0; e < Object.keys(t).length; e++) t["onSale"] && s.push(t["onSale"])
+                                        })), n("setOnSale", s[0]), s = [], a.products.map((function (t) {
+                                            for (var e = 0; e < Object.keys(t).length; e++) t["newComing"] && s.push(t["newComing"])
+                                        })), n("setNewComing", s[0]);
+                                    case 9:
+                                    case"end":
+                                        return e.stop()
+                                }
+                            }), e)
+                        })))()
+                    }
+                },
+                getters: {
+                    getOnSale: function (t) {
+                        return t.onSale
+                    }, getQuantityAvailableInDbById: function (t, e) {
+                        return function (t) {
+                            var n = e.getProductRequestedById(t);
+                            return parseInt(n.quantity)
+                        }
+                    }, getProductRequestedById: function (t, e) {
+                        return function (t) {
+                            var n = Object(P["a"])(E["a"]), a = null, s = !1;
+                            n.findDeep(e.getAllProducts, (function (e, n, r) {
+                                (s || "id" === n && e === parseInt(t)) && (s = !1, a = r)
+                            }), {checkCircular: !1, skipChildren: !0, cloneDeep: !1});
+                            return s = !1, a
+                        }
+                    }, getMyCart: function (t) {
+                        return t.cart
+                    }, getAllProducts: function (t) {
+                        return t.products
+                    }, getTotalToPay: function (t) {
+                        if (null === t.cart[0]) return 0;
+                        var e = 0;
+                        return t.cart.forEach((function (t, n) {
+                            e += t.quantity * t.price
+                        })), e
+                    }, getTotalItemsInCart: function (t) {
+                        var e = 0;
+                        return null === t.cart[0] || t.cart.forEach((function (t, n) {
+                            e += t.quantity
+                        })), e
+                    }
+                }
+            });
+            a["default"].mixin({
+                computed: {}, mounted: function () {
+                }
+            });
+            var j = M, I = (n("3ca3"), n("ddb0"), n("8c4f"));
+            a["default"].use(I["a"]);
+            var O = new I["a"]({
+                mode: "history", routes: [{
+                    path: "/", name: "/home", component: function (t) {
+                        return n.e("demo").then(function () {
+                            return t(n("bb51"))
+                        }.bind(null, n)).catch(n.oe)
+                    }
+                }, {
+                    path: "/Products", name: "products", component: function () {
+                        return n.e("chunk-6a09b50c").then(n.bind(null, "e6dc"))
+                    }
+                }, {
+                    path: "/CartDetails", name: "Cart", params: !0, component: function () {
+                        return n.e("chunk-5b32081f").then(n.bind(null, "b789"))
+                    }
+                }, {
+                    path: "/about", name: "about", component: function () {
+                        return n.e("chunk-2d22d746").then(n.bind(null, "f820"))
+                    }
+                }, {
+                    path: "/showDetail", name: "showDetail", params: !0, component: function () {
+                        return n.e("chunk-624f704c").then(n.bind(null, "c6fe"))
+                    }
+                }, {
+                    path: "/success", name: "success", component: function () {
+                        return n.e("chunk-2d21a36a").then(n.bind(null, "bb0d"))
+                    }
+                }, {
+                    path: "/failure", name: "failure", component: function () {
+                        return n.e("chunk-2d2255f7").then(n.bind(null, "e3b5"))
+                    }
+                }, {
+                    path: "/info", name: "info", params: !0, component: function () {
+                        return n.e("chunk-313668be").then(n.bind(null, "92e1"))
+                    }, beforeEnter: function (t, e, n) {
+                        "/info" === t.path ? j.state.cart.length > 0 ? n("/Info") : n("/") : n()
+                    }
+                }, {
+                    path: "/order-complete/", name: "order-complete", component: function (t) {
+                        return n.e("demo").then(function () {
+                            return t(n("092c"))
+                        }.bind(null, n)).catch(n.oe)
+                    }
+                }], scrollBehavior: function () {
+                    document.getElementById("app").scrollIntoView()
+                }
+            }), B = n("f309"), q = n("1dce"), A = n.n(q), H = n("d768"), T = n.n(H), $ = n("11a1");
+            a["default"].use(T.a), a["default"].use($["a"]), a["default"].use(A.a), a["default"].use(B["a"]);
+            var N = {};
+            new a["default"]({
+                store: j, router: O, opts: N, data: {return: {}}, created: function () {
+                    j.dispatch("fetchProducts").then((function (t) {
+                    })).catch((function (t) {
+                        return console.log(t)
+                    }))
+                }, render: function (t) {
+                    return t(m)
+                }
+            }).$mount("#app")
+        }, "57bd": function (t, e, n) {
+        }, fe5b: function (t, e, n) {
+            "use strict";
+            n("57bd")
+        }
+    });
+    //# sourceMappingURL=app.dcfd3650.js.map
+</script>

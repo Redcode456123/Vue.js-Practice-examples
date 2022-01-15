@@ -1,0 +1,568 @@
+<template>
+
+  <div>
+
+    <div class="row">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+      <div class="col-75">
+        <div class="container">
+          <!--          <form action="/action_page.php">-->
+          <form>
+            <div class="myclass" style="margin-top:-10% !important">
+              <div class="row">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" class="form-control" id="fname" placeholder="name" v-model="form.firstName"
+                         style="text-align: center"/>
+                  <!-------------------------------------------------- Started Name Field------------------------------------------------->
+                  <div>
+                    <div
+                        v-bind:class="{ error: $v.form.firstName.$error }"
+                        v-if="!$v.form.firstName.required"
+                        style="color: brown;text-align: center;    margin-top: -5%;"
+                    >
+                      <p>Field is required</p>
+                    </div>
+                    <div
+                        v-bind:class="{ error: $v.form.firstName.minLength.$error }"
+                        v-if="!$v.form.firstName.minLength"
+                        style="color: brown;    margin-top: -5%;"
+                    >
+                      Name must have at least
+                      {{ $v.form.firstName.$params.minLength.min }} letters.
+                    </div>
+                    <div
+                        v-bind:class="{ error: $v.form.firstName.$error }"
+                        v-if="!$v.form.firstName.onlyText"
+                        style="color: brown"
+                    >
+                      Name must be no numeric, no symbols, english only.
+                    </div>
+                  </div>
+                  <!-------------------------------------------------- Finished Name Field------------------------------------------------->
+
+
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="john@example.com">
+                  <label for="phone"><i class="fa fa-phone"></i> Phone</label>
+                  <input type="text" id="phone" name="phone" placeholder="71-146936">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="New York">
+
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">Governorates</label>
+                      <select class="solid" id="state"
+                              style=" border: #818080 solid;  width: 100%;  margin-bottom: 20px;    padding: 12px;    border: 1px solid #ccc;    border-radius: 3px;"
+                              ref="selectedGovernorateref"
+                              :v-model="selectedGovernorate" @change="onChangeGovernorate($event)">
+                        <option>Akkar</option>
+                        <option>Baalbek-Hermel</option>
+                        <option>Beirut</option>
+                        <option>Beqaa</option>
+                        <option>Keserwan-Jbeil</option>
+                        <option>Mount Lebanon</option>
+                        <option>Nabatieh</option>
+                        <option>North</option>
+                        <option>South</option>
+                      </select>
+                      <!--                      <input type="text" id="state" name="state" placeholder="NY">-->
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                </div>
+                <!--Starting payment-->
+
+
+                <div class="col-50" style="top:100px">
+                  <h3>Payment</h3>
+                  <b-card no-body>
+                    <b-tabs card>
+                      <b-tab title="Credit Card" active>
+                        <b-card-text>
+
+                          <label for="fname">Accepted Cards</label>
+
+                          <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;margin:1px"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;margin:1px"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;margin:1px"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;margin:1px"></i>
+                          </div>
+                          <label for="cname">Name on Card</label>
+                          <input type="text" id="cname" name="cardname" placeholder="John More Doe"
+                                 v-model="firstNameCredit">
+                          <div>
+                            <div
+                                v-bind:class="{ error: $v.firstNameCredit.$error }"
+                                v-if="!$v.firstNameCredit.required"
+                                style="color: brown;text-align: center;    margin-top: -5%;"
+                            >
+                              <p>Field is required</p>
+                            </div>
+                            <div
+                                v-bind:class="{ error: $v.firstNameCredit.$error }"
+                                v-if="!$v.firstNameCredit"
+                                style="color: brown;    margin-top: -5%;"
+                            >
+                              Name must have at least
+                              {{ $v.firstNameCredit.$params.minLength.min }} letters.
+                            </div>
+                            <div
+                                v-bind:class="{ error: $v.firstNameCredit.$error }"
+                                v-if="!$v.firstNameCredit.onlyText"
+                                style="color: brown"
+                            >
+                              Name must be no numeric, no symbols, english only.
+                            </div>
+                          </div>
+
+
+                          <!--                          <label for="expmonth">Exp Month</label>-->
+                          <!--                          <input type="text" id="expmonth" name="expmonth" placeholder="September">-->
+                          <div class="row">
+                            <div class="col-50">
+
+                            </div>
+                            <div class="col-50">
+
+                            </div>
+                            <checkout></checkout>
+                            <button class="btn btn-primary">Submit</button>
+                          </div>
+                        </b-card-text>
+
+                      </b-tab>
+
+
+                      <b-tab title="Delivery">
+                        <b-card-text>
+                          Cash On Delivery:
+                          <br>
+                          <br> Please check this option if you want items delivered to your address.
+                          <br><br>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="deliveryCheckBox"
+                                   id="flexCheckDefault"
+                                   ref="deliverySelected" v-on:click="clickedCashOnDelivery($event)">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              I confirm the delivery option with the fees involved. (check to show the rate).
+                            </label>
+                            <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here"
+                                        id="floatingTextarea"></textarea>
+                              <label for="floatingTextarea" style="color: #667888">Leave a note</label>
+                            </div>
+                          </div>
+                        </b-card-text>
+                      </b-tab>
+
+                      <b-tab title="Pickup">
+                        <b-card-text>
+                          Pickup tomorrow:
+                          <br><br>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              I confirm the pickup by maximum tomorrow*.
+                              <p style="font-size: 9px;color:darkred"> *Please note that 2 or more missing pickups will
+                                put the user on blacklist for future pickups.</p>
+                            </label>
+                          </div>
+                        </b-card-text>
+                      </b-tab>
+
+                    </b-tabs>
+                  </b-card>
+                </div>
+              </div>
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+            </label>
+            <input type="submit" value="Finish Order/Confirm" class="btn" :disabled="$v.form.$invalid">
+          </form>
+
+
+        </div>
+
+      </div>
+
+      <div class="col-25">
+        <div class="container">
+          <h4><a href="CartDetails">Cart </a><span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>{{
+              this.$store.getters.getTotalItemsInCart
+            }}</b></span>
+          </h4>
+          <div v-for="(item,index) in this.$store.getters.getMyCart" :key="index">
+            <p><a href="#" style="font-size: 14px">{{ item.model }}</a> <span class="price">({{item.quantity}}x) ${{ item.price }}</span></p>
+          </div>
+          <!--          <p><a href="#">Product 2</a> <span class="price">$5</span></p>-->
+          <!--          <p><a href="#">Product 3</a> <span class="price">$8</span></p>-->
+          <!--          <p><a href="#">Product 4</a> <span class="price">$2</span></p>-->
+          <hr>
+          <p v-show="this.show" style="color:darkred;"> Delivery<span class="price">+  $ {{ deliveryChargeValue }}</span>
+          </p>
+          <p>Total <span class="price" style="color:black"><b>$ {{
+              $store.getters.getTotalToPay + deliveryChargeValue
+            }}</b></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="myfooter" style="padding-top: 10px">
+      <footer data-v-fae5bece="" id="sec-b4e8" class="u-align-center u-clearfix u-footer u-grey-80 u-footer">
+        <div data-v-fae5bece="" class="u-align-left-xs u-clearfix u-sheet u-valign-bottom u-sheet-1"></div>
+        <section data-v-fae5bece="" class="u-backlink u-clearfix u-grey-80"><a data-v-fae5bece=""
+                                                                               href="https://nicepage.com/website-templates"
+                                                                               target="_blank" class="u-link"><span
+            data-v-fae5bece="">Website Templates</span></a>
+          <p data-v-fae5bece="" class="u-text"><span data-v-fae5bece="">created with</span></p><a data-v-fae5bece=""
+                                                                                                  href=""
+                                                                                                  target="_blank"
+                                                                                                  class="u-link"><span
+              data-v-fae5bece="">Website Builder Software</span></a>.
+        </section>
+
+      </footer>
+
+    </div>
+
+    <!--    <form>-->
+
+    <!--    </form>-->
+
+
+  </div>
+</template>
+
+<script>
+
+import ToggleCheckBoxes from "../components/ToggleCheckBoxes";
+
+
+import {
+  required,
+  minLength,
+  between,
+  helpers,
+} from "vuelidate/lib/validators";
+import email from "vuelidate/lib/validators/email";
+
+import Checkout from "../components/checkout";
+
+
+export default {
+
+  name: "Info",
+  data() {
+    return {
+      selectedGovernorate: 'Akkar',
+      deliveryChargeValue: 0,
+      // defaultDeliveryCharge: 0,
+      show: false,
+      //***************************************************************
+      cardNumber: null,
+      cardExpiry: null,
+      cardCvc: null,
+      cardPostal: null,
+      cardErrors: {},
+      // declaring card-brand in data{} enables card brand name/classes.
+      cardBrand: null,
+      firstNameCredit: "",
+      form: {
+        firstName: "",
+        // lastName: "",
+        // emailAdd: "",
+        // phoneNum: "",
+        // birth: "",
+      },
+    };
+  },
+  components: {Checkout}, //ToggleCheckBoxes
+  validations: {
+    firstNameCredit: {
+      required: required,
+      minLength: minLength(2),
+      onlyText(firstName) {
+        return /(^$)|(^[a-zA-z]+([\s][a-zA-Z]+)*$)/.test(firstName); // checks for english letters and allow null at the beginning, allow space between 2 words
+      },
+    },
+    form: {
+      //***************
+      firstName: {
+        required: required,
+        minLength: minLength(2),
+        onlyText(firstName) {
+          return /(^$)|(^[a-zA-z]+([\s][a-zA-Z]+)*$)/.test(firstName); // checks for english letters and allow null at the beginning, allow space between 2 words
+        },
+      },
+      //***************
+    }
+  },
+  methods: {
+    onChangeGovernorate(event) {
+      this.selectedGovernorate = event.target.value;
+
+      if (this.$refs.deliverySelected.checked === false) {
+        this.deliveryChargeValue = 0;
+        return
+      }
+      if (event.target.value === "Akkar") {
+        this.deliveryChargeValue = 25;
+
+      } else if (event.target.value === "Baalbek-Hermel") {
+        this.deliveryChargeValue = 15;
+      } else if (event.target.value === "Beirut") {
+        this.deliveryChargeValue = 65;
+      } else if (event.target.value === "Keserwan-Jbeil") {
+        this.deliveryChargeValue = 60;
+      } else if (event.target.value === "Mount Lebanon") {
+        this.deliveryChargeValue = 80;
+      } else if (event.target.value === "Nabatieh") {
+        this.deliveryChargeValue = 64;
+      } else if (event.target.value === "North") {
+        this.deliveryChargeValue = 35;
+      } else if (event.target.value === "Beqaa") {
+        this.deliveryChargeValue = 105;
+      } else {
+        this.deliveryChargeValue = 65;
+      }
+    },
+    // ****************************************
+    clickedCashOnDelivery(event) {
+      if (event.target.checked) {
+        this.show = true
+        if (this.$refs.deliverySelected.checked === false) {
+          this.deliveryChargeValue = 0;
+          return
+        }
+
+        if (this.selectedGovernorate === "Akkar") {
+          this.deliveryChargeValue = 25;
+        } else if (this.selectedGovernorate === "Baalbek-Hermel") {
+          this.deliveryChargeValue = 15;
+        } else if (this.selectedGovernorate === "Beirut") {
+          this.deliveryChargeValue = 65;
+        } else if (this.selectedGovernorate === "Keserwan-Jbeil") {
+          this.deliveryChargeValue = 60;
+        } else if (this.selectedGovernorate === "Mount Lebanon") {
+          this.deliveryChargeValue = 80;
+        } else if (this.selectedGovernorate === "Nabatieh") {
+          this.deliveryChargeValue = 64;
+        } else if (this.selectedGovernorate === "North") {
+          this.deliveryChargeValue = 35;
+        } else if (this.selectedGovernorate === "Beqaa") {
+          this.deliveryChargeValue = 105;
+        } else {
+          this.deliveryChargeValue = 65;
+        }
+      } else {
+        this.deliveryChargeValue = 0
+        this.show = false
+      }
+    },
+//********************************************************
+
+
+    validate: function () {
+      // init
+      this.cardErrors = {};
+
+      // validate card number
+      if (this.cardNumber === null) {
+        this.cardErrors.cardNumber = "Credit Card Number required.";
+
+      } else {
+        if (!this.$cardFormat.validateCardNumber(this.cardNumber)) {
+          this.cardErrors.cardNumber = "Invalid Credit Card Number.";
+        }
+      }
+      if (this.cardExpiry === null) {
+        this.cardErrors.cardExpiry = "Expiry Date required.";
+
+      } else {
+        // validate card expiry
+        if (!this.$cardFormat.validateCardExpiry(this.cardExpiry)) {
+          this.cardErrors.cardExpiry = "Invalid Expiration Date.";
+        }
+      }
+      // validate card CVC
+      if (this.cardCvc === null) {
+        this.cardErrors.cardCvc = "CVC number required.";
+
+      } else {
+        if (!this.$cardFormat.validateCardCVC(this.cardCvc)) {
+          this.cardErrors.cardCvc = "Invalid CVC.";
+        }
+      }
+    },
+  },
+
+  watch: {
+
+    // handle auto-focus to next field
+    // Note: since CVC can be 3 OR 4 digits we don't watch it
+    cardNumber: function (val) {
+      if (this.$cardFormat.validateCardNumber(val)) {
+        this.$refs.cardExpiry.focus();
+      }
+    },
+    cardExpiry: function (val) {
+      if (this.$cardFormat.validateCardExpiry(val)) {
+        this.$refs.cardCvc.focus();
+      }
+    }
+  },
+  onMounted() {
+    this.$refs.cardNum.focus();
+  },
+
+
+}
+</script>
+<style scoped>
+
+* {
+  box-sizing: border-box;
+}
+
+form > div > div:nth-of-type(2) {
+  background-color: #2A6496;
+}
+
+
+.row {
+  margin-top: 10% !important;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  /*padding: 5px 20px 15px 20px;*/
+  /*border: 1px solid lightgrey;*/
+  /*border-radius: 3px;*/
+}
+.col-75 > .container{
+  margin-top:auto;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .col-25 {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 600px) {
+    /*for desktop*/
+    .myclass {
+      margin-top: -10% !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    /*for mobile*/
+    .container {
+      margin-top: 20%;
+    }
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative
+  }
+
+  .myfooter {
+    /*bottom:0px;*/
+    /*position:absolute;*/
+  }
+
+
+}
+</style>

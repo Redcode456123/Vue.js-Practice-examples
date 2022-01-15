@@ -1,0 +1,96 @@
+
+/(^$)|(^[ء-ي]+([\s][ء-ي]+)*$)/.test(firstNameArab)
+
+https://the-mobile-store.netlify.app/
+
+Firebase is one such cloud-based BaaS platform that provides database, cloud storage, cloud messaging, and remote configuration.
+
+Your code should look like this: -
+
+Demo Here
+
+<template>
+  <div>
+    <input v-model="searchTerm" type="text">
+    <div></div>
+    <div v-for="car in filterByTerm" :key="car.id">
+      <span>{{ car.name }}</span>
+    </div>
+  </div>
+</template>
+
+
+<script>
+export default {
+  name: "filter-demo",
+  data() {
+    return {
+      localCars: [{ name: "audi" }, { name: "fiat" }],
+      searchTerm: ""
+    };
+  },
+  computed: {
+    filterByTerm() {
+      return this.localCars.filter(car => {
+        return car.name.toLowerCase().includes(this.searchTerm);
+      });
+    }
+  },
+  methods: {}
+};
+</script>
+
+
+In Vue.js 2.0, computed properties can be used to replace filters:
+
+computed: {
+  searchInLowerCase() {
+    return this.search.toLowerCase().trim();
+  }
+}
+
+Host site for free:
+----------------------
+heroku
+Firebase
+Netlify
+
+
+Getters can not call dispatch as they are passed the state not context of the store
+
+
+performance: https://news.shardlabs.io/how-to-drastically-reduce-your-bundle-size-and-load-time-in-vue-js-54370d513fdf
+
+//https://scotch.io/@connor11528/how-to-process-payments-with-nodejs-vue-2-and-stripe
+
+//https://adrianmejia.com/how-to-build-a-node-js-ecommerce-website-for-free/
+
+//https://stripe.com/docs/testing\
+
+Payment succeeds
+4242 4242 4242 4242
+
+Payment requires authentication
+4000 0025 0000 3155
+
+Payment is declined
+4000 0000 0000 9995
+
+4000056655665556
+
+https://medium.com/@damijolayemi/how-to-use-vuejs-with-stripe-elements-and-uikit-192a7be4f57
+
+https://commercejs.com/docs/guides/checkout-vue/#thats-it
+
+`${this.baseURL}order
+
+https://dev.to/jahangeer/stripe-payment-gateway-integration-in-node-js-5733
+
+https://scotch.io/@connor11528/how-to-process-payments-with-nodejs-vue-2-and-stripe
+
+https://medium.com/@damijolayemi/how-to-use-vuejs-with-stripe-elements-and-uikit-192a7be4f57
+
+https://www.digitalocean.com/community/tutorials/vuejs-vue-google-maps
+
+https://stackoverflow.com/questions/34133176/jquery-datepicker-limit-range-to-7-working-days-ahead-excluding-weekends
+

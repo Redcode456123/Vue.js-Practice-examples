@@ -1,0 +1,247 @@
+<template>
+  <div>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <section class="row payment-form">
+
+      <h5 class="#e0e0e0 grey lighten-4">
+        Payment Method
+        <span class="right">${{ amount }}</span>
+      </h5>
+
+      <div class="error red center-align white-text">
+        {{ stripeValidationError }}
+      </div>
+
+      <div class="col s12 card-element">
+        <label>Card Number</label>
+        <div id="card-number-element" class="input-value">
+        </div>
+      </div>
+
+      <div class="col s6 card-element">
+        <label>Expiry Date</label>
+        <div id="card-expiry-element"></div>
+      </div>
+
+      <div class="col s6 card-element">
+        <label>CVC</label>
+        <div id="card-cvc-element"></div>
+      </div>
+
+      <div class="col s12 place-order-button-block">
+        <button class="btn col s12 #e91e63 pink" @click="placeOrder">PlaceOrder</button>
+      </div>
+
+    </section>
+
+  </div>
+</template>
+
+<script>
+
+// import * as Stripe from "stripe";
+
+import axios from "axios";
+
+export default {
+  name: "creditCard",
+//4242424242424242
+  data() {
+
+    return {
+      token: "",
+      stripe: null,
+      name: 'Connor Leech',
+      email: 'connor@employbl.com',
+      engravingText: 'This is the text to put on the bundle of sticks',
+      address: {
+        street: '123 Something Lane',
+        city: 'San Francisco',
+        state: 'CA',
+        zip: '94607'
+      },
+      card: {
+        number: '4242424242424242',
+        cvc: '123',
+        exp_month: '01',
+        exp_year: '19'
+      },
+
+      "object": "charge",
+      description: 'Example charge',
+      // source: token,
+      stripeValidationError: "",
+      amount: 25,
+
+
+      "billing_details": {
+
+        "address": {
+          "city": "Hammana",
+          "country": "Lebanon",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null,
+          "balance_transaction": "txn_3JxFV8IzUJ8Yj6Lr0Uki3jjN",
+        },
+        // "email": null,
+
+        "phone": null,
+        currency: 'usd',
+        //elements
+        cardNumber: '',
+        cardExpiry: '',
+        cardCvc: '',
+        stripe: null,
+
+        cardNumberElement: null,
+        cardExpiryElement: null,
+        cardCVCElement: null,
+      }
+    }
+  },
+  mounted() {
+    var $this = this;
+    this.stripe = Stripe("pk_test_51JxFORIzUJ8Yj6LrjVZG3GdxozlwMMPph4oy4izqxp4J1hhS2bBPmfpk9zRKDOKsyEE9u3upoRyBBQIdZP1msoG700CXyDqmyJ")
+    this.createAndMountFormElements();
+    var charge_id = 15;
+    alert("I am here")
+    axios.get(`${window.endpoint}/charge/${charge_id}`)
+        .then((res) => {
+          this.orderDetails = res.data.charge;
+        });
+  },
+  methods: {
+    placeOrderButtonPressed() {
+      var $this = this;
+      $this.stripe.createToken($this.cardNumberElement).then(result => {
+        if (result.error) {
+          this.stripeValidationError = result.error.message;
+          alert(this.stripeValidationError)
+        } else {
+          var stripeObject = {
+            amount: this.amount,
+            source: result.token
+          }
+
+          // this.saveDataToFireStore(stripeObject)
+        }
+      });
+    },
+
+    createAndMountFormElements() {
+      var $this = this;
+      var elements = this.stripe.elements();
+
+      this.cardNumberElement = elements.create("cardNumber");
+      this.cardNumberElement.mount("#card-number-element");
+
+      this.cardExpiryElement = elements.create("cardExpiry");
+      this.cardExpiryElement.mount("#card-expiry-element");
+
+      this.cardCvcElement = elements.create("cardCvc");
+      this.cardCvcElement.mount("#card-cvc-element");
+
+      this.cardNumberElement.on("change", this.setValidationError);
+      this.cardExpiryElement.on("change", this.setValidationError);
+      this.cardCvcElement.on("change", this.setValidationError);
+
+    },
+    reset() {
+      this.clearElementInputs()
+      this.clearCardErrors()
+    },
+
+
+    clearElementInputs() {
+      this.cardCvc.clear()
+      this.cardExpiry.clear()
+      this.cardNumber.clear()
+    },
+    clearCardErrors() {
+      this.stripeError = ''
+      this.cardCvcError = ''
+      this.cardExpiryError = ''
+      this.cardNumberError = ''
+    },
+
+
+    setValidationError(event) {
+      this.stripeValidationError = event.error ? event.error.message : "";
+    },
+    placeOrder() {
+      var $this = this;
+      this.stripe.createToken(this.cardNumberElement).then(result => {
+        console.log('result', result)
+        if (result.error) {
+          this.stripeValidationError = result.error.message
+        } else if (result.token) {
+          console.log('token', result.token)
+          //    const stripe = require('stripe')('pk_test_51JxFORIzUJ8Yj6LrjVZG3GdxozlwMMPph4oy4izqxp4J1hhS2bBPmfpk9zRKDOKsyEE9u3upoRyBBQIdZP1msoG700CXyDqmyJ');
+          let user = this.stripe.customers.create({email: 'xxxx@gmail.com', payment_method: token});
+          stripe.paymentIntents.create({
+            amount: 25 * 100, // $25
+            currency: 'usd',
+            customer: user
+          });
+          var request = {
+            name: this.name,
+            email: this.email,
+            engravingText: this.engravingText,
+            address: this.address,
+            card: this.card,
+            // token_from_stripe: token_from_stripe
+          };
+          // Send to our server
+          axios.post('http://localhost:3000/charge', request)
+              .then((res) => {
+                var error = res.data.error;
+                var charge = res.data.charge;
+                if (error) {
+                  console.error(error);
+                } else {
+                  this.$router.push({path: `order-complete/${charge.id}`})
+                }
+              });
+        }
+      })
+    },
+
+  }
+}
+</script>
+
+<style scoped>
+.payment-form {
+  max-width: 400px;
+  /*margin: 20px auto;*/
+  margin: 170px auto;
+  border: 1px solid #ececec;
+}
+
+.payment-form h5 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.card-element {
+  margin-top: 5px;
+}
+
+#card-number-element,
+#card-expiry-element,
+#card-cvc-element {
+  background: white;
+  padding: 5px;
+  border: 1px solid #ececec;
+}
+
+.place-order-button-block {
+  margin: 10px 0;
+}
+</style>
+//https://github.com/softauthor/vue-stripe-elements-cloud-functions/blob/master/start/src/components/Checkout.vue
+//https://softauthor.com/vue-stripe-elements-firebase-build-a-checkout-form/#download-starter-vue-project
+//https://stackoverflow.com/questions/69759284/how-to-use-stripecheckout-in-vuejs

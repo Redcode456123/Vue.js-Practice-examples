@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "model": "Google Pixel 3",
+    "image": "/src/assets/images/high-angle-app-learning-new-language-phone_23-2148293463.jpg",
+    "path": "/src/assets/images/high-angle-app-learning-new-language-phone_23-2148293463.jpg",
+    "price": 799,
+    "quantity": 2
+  },
+  {
+    "id": 2,
+    "model": "Samsung Note 9",
+    "image": "/src/assets/images/samsung-1283938__340.jpg",
+    "price": 999,
+    "quantity": 2
+  },
+  {
+    "id": 10,
+    "model": "Samsung Galaxy A7 (2020)",
+    "image": "/src/assets/images/Samsung S7.jpg",
+    "price": 533,
+    "quantity": 2
+  },
+  {
+    "id": 12,
+    "model": "Samsung Galaxy A7 (2018)",
+    "path": "https://media.istockphoto.com/photos/new-ios-14-screen-iphone-apples-next-operating-system-for-its-to-be-picture-id1270790424?k=20&m=1270790424&s=612x612&w=0&h=p_1DGqUriFPLKnt1KNbtRwdxJkB0ozkCQ3zE6KZOde8=",
+    "image": "https://media.istockphoto.com/photos/new-ios-14-screen-iphone-apples-next-operating-system-for-its-to-be-picture-id1270790424?k=20&m=1270790424&s=612x612&w=0&h=p_1DGqUriFPLKnt1KNbtRwdxJkB0ozkCQ3zE6KZOde8=",
+    "price": 630,
+    "quantity": 2
+  },
+  {
+    "id": 14,
+    "model": "Samsung Galaxy A7 (2018)",
+    "path": "https://fdn.gsmarena.com/imgroot/reviews/20/samsung-galaxy-s20-plus/lifestyle/-1024w2/gsmarena_002.jpg",
+    "image": "https://fdn.gsmarena.com/imgroot/reviews/20/samsung-galaxy-s20-plus/lifestyle/-1024w2/gsmarena_002.jpg",
+    "price": 533,
+    "quantity": 2
+  },
+  {
+    "id": 15,
+    "model": "Samsung Galaxy A7 (2018)",
+    "path": "https://www.phonefinity.net/wp-content/uploads/camon-17-blue.jpg",
+    "image": "https://www.phonefinity.net/wp-content/uploads/camon-17-blue.jpg",
+    "price": 533,
+    "quantity": 2
+  }
+]

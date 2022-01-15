@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/untitled1-vueproj-todelete",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "g",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}

@@ -1,0 +1,610 @@
+<template>
+  <div >
+
+    <!--  <link rel="stylesheet" href="public/src/assets/css/nicepage.css" media="screen">-->
+    <link rel="stylesheet" href="/src/assets/css/Copy-of-Home.css" media="screen">
+
+    <!--   Vertical Menu       -->
+    <div style="position:relative">
+      <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <div class="wrap" >
+    <span class="cormen" style="padding-top:20px;">
+        <label name="hamburger menu" for="cormid">Click to open menu</label>
+        <input id="cormid" type="checkbox">
+        <ul>
+          <div style=" display: inline-block; width:90%">
+<span id='close' style="float:right;cursor:pointer"
+      onclick='(this.parentNode.parentNode.parentNode.firstChild).click()'>x</span>
+<p style="color:black;float:left">Filter</p>
+      </div>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Invites</a></li>
+            <li><a href="#">Search Jobs</a></li>
+          <!--            <li><a href="#">Saved Jobs</a></li>-->
+          <!--            <li>MAILBOX</li>-->
+          <!--            <li><a href="#">Inbox</a></li>-->
+          <!--            <li><a href="#">Outbox</a></li>-->
+        </ul>
+    </span>
+
+      </div>
+      <!--   End Vertical Menu   ; div closed after the end of website content    -->
+      <!-- start of website content -->
+      <div style="position:relative;z-index:-1;padding-left:100px">
+        <section class="u-align-center u-clearfix u-section-1" id="sec-4fe4" style="left:-70;max-width:360px">
+          <div
+              class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+            <!--products--><!--products_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}-->
+            <!--/products_options_json-->
+            <div
+                class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-grid u-pagination-center u-products u-products-1">
+              <div class="u-repeater u-repeater-1"><!--product_item-->
+                <div
+                    class="u-align-center-lg u-align-center-sm u-align-center-xl u-align-center-xs u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-1"><!--product_image-->
+                    <img alt=""
+                         class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-image u-image-default u-product-control u-image-1"
+                         src="/src/assets/images/samsung-1283938__340.jpg" data-image-width="510"
+                         data-image-height="340"><!--/product_image-->
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-1">
+                      <div class="u-container-layout u-container-layout-2"><!--product_title-->
+                        <h4 class="u-product-control u-text u-text-1" data-animation-name="fadeIn"
+                            data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Up">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Product 1 Title
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-left u-product-control u-product-price u-product-price-1">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-align-center-xs u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-1">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item--><!--product_item-->
+                <div
+                    class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-3"><!--product_image-->
+                    <img alt=""
+                         class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-image u-image-default u-product-control u-image-2"
+                         src="https://media.istockphoto.com/photos/samsung-galaxy-s7-edge-smartphone-charging-power-via-powerbank-picture-id968920414?s=612x612"
+                         data-image-width="720" data-image-height="480"><!--/product_image-->
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-2">
+                      <div class="u-container-layout u-container-layout-4"><!--product_title-->
+                        <h4 class="u-product-control u-text u-text-2" data-animation-name="fadeIn"
+                            data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Up">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Product 2 Title
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-left u-product-control u-product-price u-product-price-2">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-align-center-xs u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-2">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-5"><!--product_image-->
+                    <img alt=""
+                         class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-image u-image-default u-product-control u-image-3"
+                         src="https://cdn.pixabay.com/photo/2018/03/09/19/36/iphone-x-3212446_960_720.jpg"
+                         data-image-width="453" data-image-height="340"><!--/product_image-->
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-3">
+                      <div class="u-container-layout u-container-layout-6"><!--product_title-->
+                        <h4 class="u-product-control u-text u-text-3" data-animation-name="fadeIn"
+                            data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Up">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Product 3 Title
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-left u-product-control u-product-price u-product-price-3">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-align-center-xs u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-3">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-7"><!--product_image-->
+                    <img alt=""
+                         class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-image u-image-default u-product-control u-image-4"
+                         src="https://cdn.pixabay.com/photo/2019/04/04/10/47/samsung-4102477_960_720.jpg"
+                         data-image-width="604" data-image-height="340"><!--/product_image-->
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-4">
+                      <div class="u-container-layout u-container-layout-8"><!--product_title-->
+                        <h4 class="u-product-control u-text u-text-4" data-animation-name="fadeIn"
+                            data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Up">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Product 4 Title
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-left u-product-control u-product-price u-product-price-4">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-align-center-xs u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-4">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item-->
+              </div>
+              <div class="u-list-control"></div>
+            </div><!--/products--><!--products--><!--products_options_json-->
+            <!--{"type":"Recent","source":"","tags":"","count":""}--><!--/products_options_json-->
+            <div
+                class="u-expanded-width-md u-expanded-width-sm u-layout-grid u-pagination-center u-products u-products-2">
+              <div class="u-repeater u-repeater-2"><!--product_item-->
+                <div
+                    class="u-align-center-lg u-align-center-sm u-align-center-xl u-align-center-xs u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-9"><!--product_image-->
+                    <a href="www.samsung.com">
+                      <img alt="" class="u-image u-image-default u-product-control u-image-5"
+                           src="https://cdn.pixabay.com/photo/2019/12/27/01/47/samsung-4721544_960_720.jpg"
+                           data-image-width="1000" data-image-height="1000"><!--/product_image-->
+                    </a>
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-5">
+                      <div class="u-container-layout u-container-layout-10"><!--product_title-->
+                        <h4 class="u-align-center u-product-control u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-5">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Samsung S10
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-center u-product-control u-product-price u-product-price-5">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$990.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-5">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item--><!--product_item-->
+
+
+                <div
+                    class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-11"><!--product_image-->
+                    <img alt="" class="u-image u-image-default u-product-control u-image-6"
+                         src="https://cdn.pixabay.com/photo/2017/12/28/02/46/flag-3044282_960_720.jpg"
+                         data-image-width="1000" data-image-height="1000"><!--/product_image-->
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-6">
+                      <div class="u-container-layout u-container-layout-12"><!--product_title-->
+                        <h4 class="u-align-center u-product-control u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-6">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Product 2 Title
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-center u-product-control u-product-price u-product-price-6">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-6">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-13"><!--product_image-->
+                    <img alt="" class="u-image u-image-default u-product-control u-image-7" src="images/5.svg">
+                    <!--/product_image-->
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-7">
+                      <div class="u-container-layout u-container-layout-14"><!--product_title-->
+                        <h4 class="u-align-center u-product-control u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-7">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Product 3 Title
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-center u-product-control u-product-price u-product-price-7">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-7">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-15"><!--product_image-->
+                    <img alt="" class="u-image u-image-default u-product-control u-image-8"
+                         src="/src/assets/images/6.svg"><!--/product_image-->
+                    <div
+                        class="u-align-center u-container-style u-expanded-width-xs u-group u-opacity u-opacity-70 u-palette-5-light-2 u-group-8">
+                      <div class="u-container-layout u-container-layout-16"><!--product_title-->
+                        <h4 class="u-align-center u-product-control u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-8">
+                          <a class="u-product-title-link" href="#"><!--product_title_content-->Product 4 Title
+                            <!--/product_title_content--></a>
+                        </h4><!--/product_title--><!--product_price-->
+                        <div class="u-align-center u-product-control u-product-price u-product-price-8">
+                          <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                            <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12
+                              <!--/product_old_price_content--></div><!--/product_old_price-->
+                            <!--product_regular_price-->
+                            <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">
+                              <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                            <!--/product_regular_price-->
+                          </div>
+                        </div><!--/product_price--><!--product_button--><!--options_json-->
+                        <!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+                        <a href="#"
+                           class="u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-palette-1-base u-btn-8">
+                          <!--product_button_content-->Add to Cart<!--/product_button_content--></a>
+                        <!--/product_button-->
+                      </div>
+                    </div>
+                  </div>
+                </div><!--/product_item-->
+              </div>
+              <div class="u-list-control"></div>
+            </div><!--/products-->
+          </div>
+
+
+
+        </section>
+
+
+        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b4e8" style="left:-70">
+          <div class="u-align-left-xs u-clearfix u-sheet u-valign-bottom u-sheet-1"></div>
+
+        <section class="u-backlink u-clearfix u-grey-80">
+          <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+            <span>Website Templates</span>
+          </a>
+          <p class="u-text">
+            <span>created with</span>
+          </p>
+          <a class="u-link" href="" target="_blank">
+            <span>Website Builder Software</span>
+          </a>.
+        </section>
+        </footer>
+      </div>
+    </div>
+    <!--End of   vertical menu-->
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: "Products",
+
+  components: {}
+}
+</script>
+
+<style scoped>
+/* Vertical Menu*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img,div.u-container-layout{
+  max-width:80%;
+  max-height:120%;
+/*background-color: #1b6d86;*/
+}
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+h1 {
+  font-weight: lighter;
+  color: #999;
+}
+
+.content {
+
+  float: left;
+  width: 80%;
+  padding-left: 1rem;
+}
+
+.cormen input[type="checkbox"],
+.cormen label {
+  display: none;
+}
+
+.cormen {
+  /*not really necessary, only used to position the menu on desktop, use your own preferred method */
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+
+.cormen input[type="checkbox"] {
+  display: none;
+}
+
+.cormen ul {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  /*styling only, below*/
+  /*padding: 1rem 1rem 0 1rem;*/
+  background-color: #f9f6f6;
+  opacity: 80%;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.cormen ul li {
+  /*styling only, below*/
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cormen ul li a {
+  display: block;
+  /*styling only, below*/
+  text-decoration: none;
+  color: #151212;
+  font-size: 1.3rem;
+  text-transform: initial;
+  text-decoration: none;
+}
+
+.cormen ul li a::before {
+  content: ">";
+  margin-right: 0.5rem;
+}
+
+.cormen ul li a:hover {
+  /*styling only, below*/
+  text-decoration: none;
+}
+
+.useropts {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+span.details {
+  order: 3;
+  flex-grow: 1;
+}
+
+span.photo {
+  order: 2;
+}
+
+span.cvs {
+  order: 1;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.userphoto {
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("//aupairireland.ie//svg/brand-jobseeker.svg");
+  height: 120px;
+  width: 120px;
+  background-size: 85px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 1500px) {
+  span.cormen input[type="checkbox"]:not(:checked) + ul .useropts {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul .useropts span {
+    padding: 0 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.details {
+    order: 3;
+    flex-grow: 1;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.photo {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.cvs {
+    order: 2;
+    flex-grow: 1;
+    text-align: right;
+  }
+}
+
+@media (max-width: 1100px) {
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.cvs div,
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.details div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  span.cormen input[type="checkbox"]:checked + ul .useropts {
+    flex-wrap: wrap;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul span.photo {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul span.details {
+    order: 3;
+    flex-grow: 1;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul span.cvs div,
+  span.cormen input[type="checkbox"]:checked + ul span.details div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cormen {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    /*styling only below, used to position the hamburger, 'width' will change depending on the 'left' value*/
+    top: 150px;
+    left: 40px;
+    width: calc(100% - 58px);
+    /*add a max width if you don't want it spanning the page*/
+    max-width: 200px;
+  }
+
+  .cormen label {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    text-indent: 999px;
+    font-size: 0;
+    color: transparent;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #878933;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .cormen label::before {
+    content: url("//aupairireland.ie/svg/icon-hamburger-white.svg");
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    text-indent: 0;
+    overflow: visible;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .cormen ul {
+    display: none;
+    list-type: none;
+    min-width: 100%;
+    border-radius: 1rem;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul {
+    display: block;
+    animation-name: fadein;
+    animation-duration: 350ms;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+
+/* End Vertical Menu*/
+</style>

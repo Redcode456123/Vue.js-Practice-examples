@@ -1,0 +1,448 @@
+<template>
+  <div>
+    <link rel="stylesheet" href="public/src/assets/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/src/assets/css/Copy-of-Home.css" media="screen">
+    <p>copyyyyy</p>
+    <!-- Starting hamburger menu-->
+    <div style="position:relative">
+      <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <div class="wrap">
+    <span class="cormen" style="padding-top:20px">
+        <label name="hamburger menu" for="cormid">Click to open menu</label>
+        <input id="cormid" type="checkbox">
+        <ul>
+          <div style=" display: inline-block; width:90%">
+<span id='close' style="float:right;cursor:pointer"
+      onclick='(this.parentNode.parentNode.parentNode.firstChild).click()'>x</span>
+<p style="color:black;float:left">Filter</p>
+      </div>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Invites</a></li>
+            <li><a href="#">Search Jobs</a></li>
+          <!--            <li><a href="#">Saved Jobs</a></li>-->
+          <!--            <li>MAILBOX</li>-->
+          <!--            <li><a href="#">Inbox</a></li>-->
+          <!--            <li><a href="#">Outbox</a></li>-->
+        </ul>
+    </span>
+      </div>
+
+      <!-- start of website content -->
+      <div style="position:absolute;z-index:-1;padding-left:10%">
+        <section class="u-align-center u-clearfix u-section-1" id="sec-4fe4">
+          <div
+              class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+            <!--products--><!--products_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}-->
+            <!--/products_options_json-->
+            <div
+                class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-grid u-pagination-center u-products u-products-1">
+              <div class="u-repeater u-repeater-1"><!--product_item-->
+                <div
+                    class="u-align-center-lg u-align-center-sm u-align-center-xl u-align-center-xs u-container-style u-products-item u-repeater-item">
+                  <ImageComponent></ImageComponent>
+                </div><!--/product_item--><!--product_item-->
+                <div
+                    class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-container-style u-products-item u-repeater-item">
+                  <ImageComponent></ImageComponent>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <ImageComponent></ImageComponent>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <ImageComponent></ImageComponent>
+                </div><!--/product_item-->
+              </div>
+              <div class="u-list-control"></div>
+            </div><!--/products--><!--products--><!--products_options_json-->
+            <!--{"type":"Recent","source":"","tags":"","count":""}--><!--/products_options_json-->
+            <div
+                class="u-expanded-width-md u-expanded-width-sm u-layout-grid u-pagination-center u-products u-products-2">
+              <div class="u-repeater u-repeater-2"><!--product_item-->
+                <div
+                    class="u-align-center-lg u-align-center-sm u-align-center-xl u-align-center-xs u-container-style u-products-item u-repeater-item">
+                  <ImageComponent2></ImageComponent2>
+                </div><!--/product_item--><!--product_item-->
+                <div
+                    class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-container-style u-products-item u-repeater-item">
+                  <ImageComponent2></ImageComponent2>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <ImageComponent2></ImageComponent2>
+                </div><!--/product_item--><!--product_item-->
+                <div class="u-align-center u-container-style u-products-item u-repeater-item">
+                  <ImageComponent2></ImageComponent2>
+                </div><!--/product_item-->
+              </div>
+              <div class="u-list-control"></div>
+            </div><!--/products-->
+          </div>
+        </section>
+
+
+        <footer class="bg-light text-center text-lg-start">
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                  molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                  aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                  molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                  aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+      </div>
+
+    </div>
+    <!--End of   Hamburger  menu-->
+
+  </div>
+
+</template>
+
+<script>
+import {mapState} from "vuex";
+import ImageComponent from "../components/ProductsComponents/ImageComponent";
+import ImageComponent2 from "../components/ProductsComponents/ImageComponent2";
+
+export default {
+  name: "Products",
+
+  components: {ImageComponent2, ImageComponent},
+
+}
+</script>
+
+<style scoped>
+/* Vertical Menu*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+h1 {
+  font-weight: lighter;
+  color: #999;
+}
+
+/*div.u-expanded-width-md.u-expanded-width-sm.u-layout-grid.u-pagination-center.u-products.u-products-2{*/
+/*  !*grid-template-columns: calc(40% - 10.5px) calc(60% - 10.5px);*!*/
+/*  background-color: #560636 !important;*/
+/*}*/
+
+.u-section-1 .u-image-6, .u-section-1 .u-image-8 {
+  margin: 29px 13px 0 auto;
+}
+
+.u-align-center-sm u-align-center-xs u-clearfix u-gradient u-header u-sticky u-sticky-3a3f u-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /*  to keep navbar position fixed*/
+}
+
+
+/*.u-container-layout u-container-layout{*/
+/*  margin-left:25%;*/
+/*  background-color: #2b542c;*/
+/*}*/
+
+@media (max-width: 575px) {
+  div#app > div:nth-of-type(2) > div > div:nth-of-type(2) {
+    margin: 0;
+    padding-left: unset !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-image-6, .u-section-1 .u-image-8 {
+    margin-top: 0 !important;
+    margin-left: -13px !important;
+
+  }
+}
+
+.content {
+
+  float: left;
+  width: 80%;
+  padding-left: 1rem;
+}
+
+.cormen input[type="checkbox"],
+.cormen label {
+  display: none;
+}
+
+.cormen {
+  /*not really necessary, only used to position the menu on desktop, use your own preferred method */
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+
+.cormen input[type="checkbox"] {
+  display: none;
+}
+
+.cormen ul {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  /*styling only, below*/
+  /*padding: 1rem 1rem 0 1rem;*/
+  background-color: #f9f6f6;
+  opacity: 80%;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.cormen ul li {
+  /*styling only, below*/
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cormen ul li a {
+  display: block;
+  /*styling only, below*/
+  text-decoration: none;
+  color: #151212;
+  font-size: 1.3rem;
+  text-transform: initial;
+  text-decoration: none;
+}
+
+.cormen ul li a::before {
+  content: ">";
+  margin-right: 0.5rem;
+}
+
+.cormen ul li a:hover {
+  /*styling only, below*/
+  text-decoration: none;
+}
+
+.useropts {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+span.details {
+  order: 3;
+  flex-grow: 1;
+}
+
+span.photo {
+  order: 2;
+}
+
+span.cvs {
+  order: 1;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.userphoto {
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("//aupairireland.ie//svg/brand-jobseeker.svg");
+  height: 120px;
+  width: 120px;
+  background-size: 85px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 1500px) {
+  span.cormen input[type="checkbox"]:not(:checked) + ul .useropts {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul .useropts span {
+    padding: 0 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.details {
+    order: 3;
+    flex-grow: 1;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.photo {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.cvs {
+    order: 2;
+    flex-grow: 1;
+    text-align: right;
+  }
+}
+
+@media (max-width: 1100px) {
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.cvs div,
+  span.cormen input[type="checkbox"]:not(:checked) + ul span.details div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  span.cormen input[type="checkbox"]:checked + ul .useropts {
+    flex-wrap: wrap;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul span.photo {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul span.details {
+    order: 3;
+    flex-grow: 1;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul span.cvs div,
+  span.cormen input[type="checkbox"]:checked + ul span.details div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cormen {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    /*styling only below, used to position the hamburger, 'width' will change depending on the 'left' value*/
+    top: 150px;
+    left: 18px;
+    width: calc(100% - 58px);
+    /*add a max width if you don't want it spanning the page*/
+    max-width: 200px;
+  }
+
+  .cormen label {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    text-indent: 999px;
+    font-size: 0;
+    color: transparent;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #878933;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .cormen label::before {
+    content: url("//aupairireland.ie/svg/icon-hamburger-white.svg");
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    text-indent: 0;
+    overflow: visible;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .cormen ul {
+    display: none;
+    list-type: none;
+    min-width: 100%;
+    border-radius: 1rem;
+  }
+
+  span.cormen input[type="checkbox"]:checked + ul {
+    display: block;
+    animation-name: fadein;
+    animation-duration: 350ms;
+  }
+
+  /*  @media (max-width:360 px){*/
+  /*.u-align-center:not.u-container-layout u-similar-container u-container-layout-5{*/
+  /*  left:-2;max-width:200px;*/
+  /*}*/
+  /*}*/
+  /*    @media (max-width:360 px){*/
+  /*  .u-header.u-sticky {*/
+  /*    position: fixed  ;*/
+  /*  }*/
+  /*}*/
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+}
+
+
+/* End Vertical Menu*/
+</style>
