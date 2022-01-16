@@ -621,7 +621,7 @@
                     }
                 }), a("script", {
                     staticClass: "u-script",
-                    attrs: {type: "application/javascript", src: "/src/assets/js/nicepage.js"}
+                    attrs: {type: "application/javascript", src: "Vue.js-Practice-examples/src/assets/js/nicepage.js"}
                 }), a("link", {
                     attrs: {
                         rel: "stylesheet",
