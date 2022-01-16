@@ -634,7 +634,7 @@
                 return a("a", {
                     staticClass: "u-image u-logo u-image-1",
                     attrs: {href: "#", "data-image-width": "80", "data-image-height": "40"}
-                }, [a("img", {staticClass: "u-logo-image u-logo-image-1", attrs: {src: "src/assets/images/logo.png"}})])
+                }, [a("img", {staticClass: "u-logo-image u-logo-image-1", attrs: {src: "Vue.js-Practice-examples/src/assets/images/logo.png"}})])
             }, function () {
                 var t = this, e = t.$createElement, a = t._self._c || e;
                 return a("li", {staticClass: "u-nav-item"}, [a("a", {
