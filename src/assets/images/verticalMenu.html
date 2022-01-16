@@ -1,0 +1,269 @@
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<h1>Pure CSS, Responsive vertical menu, to hamburger menu</h1>
+<div class="wrap">
+    <span class="cormen">
+        <label for="cormid">Click to open menu</label>
+        <input id="cormid" type="checkbox">
+        <ul>
+            <li>
+                <div class="useropts">
+                    <span class="details">
+                        <div class="edit">Edit Details</div>
+                        <div class="useredit">Edit Photo</div>
+                    </span>
+                    <span class="photo">
+                        <div class="userphoto"></div>
+                    </span>
+                    <span class="cvs">
+                        <div class="useredit">Online CV</div>
+                        <div class="edit">Word CV</div>
+                    </span>
+                    </div>
+            </li>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Invites</a></li>
+            <li><a href="#">Search Jobs</a></li>
+            <li><a href="#">Saved Jobs</a></li>
+            <li>MAILBOX</li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">Outbox</a></li>
+        </ul>
+    </span>
+    <div class="content">
+        <p>I've been looking for, and unable to find, a menu that does this - goes from vertical to hamburger menu. </p>
+        <p>So this is my attempt at making one. As an added bonus it's pure CSS, and requires no JS.</p>
+        <p> Most of the CSS is styling only, and isn't required for it to function, I've marked that out in the code. So
+            you can safely strip all that out and it will still function.</p>
+        <p>The show/hide functionality is triggered by changing the state of the (hidden) checkbox, by clicking the
+            label (which acts as the hamburger), this allows me to use the adjacent selector to expand/collapse the ul
+            which cintains the menu: <code>span.cormen input[type="checkbox"]:checked + ul</code></p>
+        <p>Resize this pane, or your browser to see it in action :D</p>
+
+        <p>I've also done a <a href="https://codepen.io/Cormac-Maher/pen/zYGVPQa">Bootstrap 4 version</a> of this.</p>
+    </div>
+</div>
+
+<style>
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: "Alegreya Sans", sans-serif;
+        font-size: 1.3rem;
+        color: #666;
+    }
+    h1 {
+        font-weight: lighter;
+        color: #999;
+    }
+    .content {
+        float: left;
+        width: 80%;
+        padding-left: 1rem;
+    }
+    .cormen input[type="checkbox"],
+    .cormen label {
+        display: none;
+    }
+    .cormen {
+        /*not really necessary, only used to position the menu on desktop, use your own preferred method */
+        display: inline-block;
+        width: 20%;
+        float: left;
+    }
+    .cormen input[type="checkbox"] {
+        display: none;
+    }
+
+    .cormen ul {
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        /*styling only, below*/
+        padding: 1rem 1rem 0 1rem;
+        background-color: #fab81e;
+        border-radius: 0.25rem;
+        margin-bottom: 0.25rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    .cormen ul li {
+        /*styling only, below*/
+        padding-bottom: 1rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .cormen ul li a {
+        display: block;
+        /*styling only, below*/
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.3rem;
+        text-transform: initial;
+        text-decoration: none;
+    }
+    .cormen ul li a::before {
+        content: ">";
+        margin-right: 0.5rem;
+    }
+    .cormen ul li a:hover {
+        /*styling only, below*/
+        text-decoration: none;
+    }
+    .useropts {
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+        align-items: flex-end;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    span.details {
+        order: 3;
+        flex-grow: 1;
+    }
+    span.photo {
+        order: 2;
+    }
+    span.cvs {
+        order: 1;
+        flex-grow: 1;
+        text-align: right;
+    }
+
+    .userphoto {
+        background-color: #fff;
+        border-radius: 50%;
+        background-image: url("//aupairireland.ie//svg/brand-jobseeker.svg");
+        height: 120px;
+        width: 120px;
+        background-size: 85px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid #fff;
+    }
+    @media (max-width: 1500px) {
+        span.cormen input[type="checkbox"]:not(:checked) + ul .useropts {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 0.5rem;
+        }
+        span.cormen input[type="checkbox"]:not(:checked) + ul .useropts span {
+            padding: 0 0.5rem;
+        }
+        span.cormen input[type="checkbox"]:not(:checked) + ul span.details {
+            order: 3;
+            flex-grow: 1;
+        }
+        span.cormen input[type="checkbox"]:not(:checked) + ul span.photo {
+            order: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+        span.cormen input[type="checkbox"]:not(:checked) + ul span.cvs {
+            order: 2;
+            flex-grow: 1;
+            text-align: right;
+        }
+    }
+    @media (max-width: 1100px) {
+        span.cormen input[type="checkbox"]:not(:checked) + ul span.cvs div,
+        span.cormen input[type="checkbox"]:not(:checked) + ul span.details div {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    @media (max-width: 400px) {
+        span.cormen input[type="checkbox"]:checked + ul .useropts {
+            flex-wrap: wrap;
+        }
+        span.cormen input[type="checkbox"]:checked + ul span.photo {
+            order: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+        span.cormen input[type="checkbox"]:checked + ul span.details {
+            order: 3;
+            flex-grow: 1;
+        }
+
+        span.cormen input[type="checkbox"]:checked + ul span.cvs div,
+        span.cormen input[type="checkbox"]:checked + ul span.details div {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .cormen {
+            display: flex;
+            flex-direction: column-reverse;
+            position: fixed;
+            /*styling only below, used to position the hamburger, 'width' will change depending on the 'left' value*/
+            top: 0px;
+            left: 30px;
+            width: calc(100% - 58px);
+            /*add a max width if you don't want it spanning the page*/
+            max-width: 300px;
+        }
+        .cormen label {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            text-indent: 999px;
+            font-size: 0;
+            color: transparent;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #fab81e;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+        .cormen label::before {
+            content: url("//aupairireland.ie/svg/icon-hamburger-white.svg");
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-indent: 0;
+            overflow: visible;
+            font-size: 22px;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .cormen ul {
+            display: none;
+            list-type: none;
+            min-width: 100%;
+            border-radius: 1rem;
+        }
+        span.cormen input[type="checkbox"]:checked + ul {
+            display: block;
+            animation-name: fadein;
+            animation-duration: 350ms;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+</style>

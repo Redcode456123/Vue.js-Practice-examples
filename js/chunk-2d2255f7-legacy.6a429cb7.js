@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2255f7"],{e3b5:function(e,t,n){"use strict";n.r(t);var a=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},c=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("p",{staticStyle:{"margin-top":"160px"}},[e._v("The payment failed")])])}],r={name:"failure"},i=r,l=n("2877"),u=Object(l["a"])(i,a,c,!1,null,"a1b23cd8",null);t["default"]=u.exports}}]);
+//# sourceMappingURL=chunk-2d2255f7-legacy.6a429cb7.js.map
