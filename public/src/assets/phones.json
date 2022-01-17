@@ -75,7 +75,7 @@
       {
         "id": 10,
         "model": "Samsung Galaxy A7 (2020)",
-        "image": "/src/assets/images/Samsung S7.jpg",
+        "image": "./src/assets/images/Samsung S7.jpg",
         "price": 533,
         "quantity": 2
       },

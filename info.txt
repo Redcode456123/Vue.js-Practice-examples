@@ -94,3 +94,6 @@ https://www.digitalocean.com/community/tutorials/vuejs-vue-google-maps
 
 https://stackoverflow.com/questions/34133176/jquery-datepicker-limit-range-to-7-working-days-ahead-excluding-weekends
 
+https://stackoverflow.com/questions/70332308/vue-cli-dist-js-is-not-found-in-website-source
+
+

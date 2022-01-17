@@ -29,9 +29,9 @@ import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
 // import 'swiper/css/swiper.css'
 // import logs from "../../../../untitled1-vueproj-todelete/public/src/assets/phones.json";
 
-import {UrlResolver} from "/src/main.js";
+import {UrlResolver} from "src/main.js";
 
-let logs = UrlResolver.resolve('public/src/assets/phones.json', '');
+let logs = UrlResolver.resolve('./src/assets/phones.json', '');
 
 export default {
   name: 'NewComing',

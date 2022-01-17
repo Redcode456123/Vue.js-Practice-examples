@@ -19,8 +19,9 @@ dirs.forEach(name => {
 
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
-        ? './'
+        ? './Vue.js-Practice-examples/'
         : '/',
+    assetsDir: process.env.BASE_URL,
     devServer: {
         https: true,
     },

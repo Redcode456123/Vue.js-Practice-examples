@@ -1,7 +1,7 @@
 <template>
   <form ref="form" @submit.prevent="sendEmail" enctype="multipart/form-data" name="message" method="post">
 
-    <div ref="div">
+    <div ref="div" style="padding-top: 8px">
       <div class="row">
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

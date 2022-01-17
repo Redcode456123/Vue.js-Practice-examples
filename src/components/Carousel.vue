@@ -44,7 +44,7 @@ border: 1px solid rgba(85, 71, 71, 0.3);">
 <script>
 import {UrlResolver} from "../main";
 // import logs from "../../../untitled1-vueproj-todelete/public/src/assets/phones.json";
-let logs=UrlResolver.resolve('public/src/assets/phones.json', '');
+let logs=UrlResolver.resolve('./src/assets/phones.json', '');
 
 //https://github.surmon.me/vue-awesome-swiper/
 import VueAwesomeSwiper from 'vue-awesome-swiper';

@@ -120,16 +120,18 @@
 </template>
 
 <script>
-import logitems from "../../public/src/assets/phones.json";
+// import logitems from "../../public/src/assets/phones.json";
 import deepdash from "deepdash";
 import flatMap from "lodash-es";
-
+// import {UrlResolver} from "../";
+// import logs from "../../../untitled1-vueproj-todelete/public/src/assets/phones.json";
+// let logitems=UrlResolver.resolve('../../src/assets/phones.json', '');
 
 export default {
 
   data() {
     return {
-      logs: logitems,
+      logs: this.$store.getters.getAllProducts,
       checkedNames: 'all',
       filteredProducts: [],
       requestedProducts: [],
