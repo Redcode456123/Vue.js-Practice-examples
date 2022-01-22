@@ -771,7 +771,7 @@
             return e || a ? z.call(this, t, e, a) : z.call(this, t).catch(t => t)
         };
         var F = new _["a"]({
-                mode: "history",
+               // mode: "history",
                 routes: [{
                     path: "/",
                     name: "/home",
