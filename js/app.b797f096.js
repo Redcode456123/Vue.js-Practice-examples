@@ -772,6 +772,7 @@
         };
         var F = new _["a"]({
                // mode: "history",
+                base: '/Vue.js-Practice-examples/',
                 routes: [{
                     path: "/",
                     name: "/home",
