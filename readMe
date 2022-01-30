@@ -1,6 +1,7 @@
 This project is my first Vue.js e-coomerce project.
 I am using stripe and MailTrap and connected to heroku which embed a Node.js file as a backend.
 Not using database for now, but just a Json file.
+MailTrap cannot send emails as I am using as Free version.
 
 Hope you like it.
 Any comments are welcomed by email to: naim.rach@gmail.com.
