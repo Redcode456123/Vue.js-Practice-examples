@@ -2,15 +2,15 @@
   {
     "id": 1,
     "model": "Google Pixel 3",
-    "image": "Vue.js-Practice-examples/src/assets/images/high-angle-app-learning-new-language-phone_23-2148293463.jpg",
-    "path":  "Vue.js-Practice-examples/src/assets/images/high-angle-app-learning-new-language-phone_23-2148293463.jpg",
+    "image": "/src/assets/images/high-angle-app-learning-new-language-phone_23-2148293463.jpg",
+    "path":  "/src/assets/images/high-angle-app-learning-new-language-phone_23-2148293463.jpg",
     "price": 799,
     "quantity": 5
   },
   {
     "id": 2,
     "model": "Samsung Note 9",
-    "image": "Vue.js-Practice-examples/src/assets/images/samsung-1283938__340.jpg",
+    "image": "/src/assets/images/samsung-1283938__340.jpg",
     "price": 999,
     "quantity": 5
   },
@@ -44,7 +44,7 @@
   {
     "id": 7,
     "model": "Huawei Mate 10 Pro",
-    "image": "Vue.js-Practice-examples/src/assets/images/samsung-1283938__340.jpg",
+    "image": "/src/assets/images/samsung-1283938__340.jpg",
     "price": 800,
     "quantity": 5
   },
@@ -58,7 +58,7 @@
   {
     "id": 9,
     "model": "Samsung Galaxy A7 (2018)",
-    "image": "Vue.js-Practice-examples/src/assets/images/samsung-1283938__340.jpg",
+    "image": "/src/assets/images/samsung-1283938__340.jpg",
     "price": 533,
     "quantity": 5
   },
@@ -75,7 +75,7 @@
       {
         "id": 10,
         "model": "Samsung Galaxy A7 (2020)",
-        "image": "Vue.js-Practice-examples/src/assets/images/Samsung S7.jpg",
+        "image": "./src/assets/images/Samsung S7.jpg",
         "price": 533,
         "quantity": 5
       },
